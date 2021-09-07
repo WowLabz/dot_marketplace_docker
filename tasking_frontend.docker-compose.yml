@@ -1,0 +1,14 @@
+version: "3.4"
+
+services:
+    dot_marketplace_frontend:
+        image: dot_marketplace_frontend
+        build:
+            context: ./tasking_frontend
+            dockerfile: Dockerfile
+        ports:
+            - "9001:8000"
+        environment: 
+            - REACT_APP_AUTH_SERVER=http://localhost:7001
+            - REACT_APP_BLOCKCHAIN_NODE=ws://127.0.0.1:9944
+        restart: always

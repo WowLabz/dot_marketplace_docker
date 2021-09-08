@@ -48,7 +48,6 @@ services:
             - .:/builds/tasking_backend
         networks: 
             - dot_marketplace
-        command: bash -c "cargo build --release && ./target/release/node-template --dev --ws-external"
 
     dot_marketplace_frontend:
         image: dot_marketplace_frontend

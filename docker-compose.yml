@@ -61,11 +61,11 @@ services:
             - authentication_service
             - dot_marketplace_node
         environment: 
-            - REACT_APP_AUTH_SERVER=mongo
-            - REACT_APP_BLOCKCHAIN_NODE=dot_marketplace_node
+            - REACT_APP_AUTH_SERVER=http://127.0.0.1:7001
+            - REACT_APP_BLOCKCHAIN_NODE=ws://127.0.0.1:9944
         networks: 
             - dot_marketplace
         restart: always
 
-networks:
+networks: 
     dot_marketplace:

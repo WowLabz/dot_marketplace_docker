@@ -1,24 +1,15 @@
-FROM paritytech/ci-linux:production
+FROM paritytech/ci-linux:production AS builder
 
 RUN apt-get update \
     && apt-get install -y git
 
 RUN git clone --single-branch -b Phase1_Milestone1 https://github.com/WowLabz/tasking_backend.git
 
-
-RUN echo "hello"
-RUN pwd
-RUN ls -la
-
 WORKDIR /builds/tasking_backend/
-RUN echo "bye"
-RUN pwd
-RUN ls -la
-
-EXPOSE 9944
-
 RUN cargo build --release
-RUN echo "later"
-RUN pwd
-RUN ls -la
-CMD ["./target/release/node-template", "--dev", "--ws-external"]
+
+FROM debian:buster-slim AS runtime
+WORKDIR /builds/tasking_backend
+COPY --from=builder /builds/tasking_backend/target/release/node-template /usr/local/bin
+EXPOSE 9944
+CMD ["/usr/local/bin/node-template", "--dev", "--ws-external"]

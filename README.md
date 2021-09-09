@@ -86,6 +86,10 @@ To stop an individual service
 ```bash
 docker-compose -f <file_name> down
 ```
+# Individual Service Repos
+1. [Tasking Backend Node](https://github.com/WowLabz/tasking_backend.git)
+2. [Tasking Frontend](https://github.com/WowLabz/tasking_frontend.git)
+3. [Authentication Service](https://github.com/WowLabz/authentication_service.git)
 
 To setup the Backend Node
 
@@ -101,7 +105,7 @@ Run `docker-compose logs <CONTAINER ID>`
 
 To setup the Auth Service
 
-To view the entire Auth Service code just [click here](https://github.com/WowLabz/dot_marketplace_authentication_service.git)
+To view the entire Auth Service code just [click here](https://github.com/WowLabz/authentication_service.git)
 
 Run `docker-compose -f tasking_authentication_service.docker-compose.yml up --build -d`
 

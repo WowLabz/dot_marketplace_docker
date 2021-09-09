@@ -8,3 +8,4 @@ WORKDIR /authentication_service
 
 RUN cargo build 
 EXPOSE 7001
+CMD [ "cargo", "run" ]

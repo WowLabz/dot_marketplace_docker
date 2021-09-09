@@ -1,4 +1,4 @@
-## Dot Martetplace Docker ##
+## Dot Marketplace Docker ##
 ## Setup ##
 First, complete the basic Rust setup instructions. If you want to play at the code level.
 

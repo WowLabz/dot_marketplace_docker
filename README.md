@@ -6,7 +6,7 @@ If No, then plz follow this simple guide to make your life easy :)
 
 Run in Docker
 
-# Install Docker-Compose
+# Install Docker & Docker-Compose
 
 First, install Docker and Docker Compose. Follow the basic installation guide [Docker](https://docs.docker.com/engine/install/) and [Docker Compose](https://docs.docker.com/compose/install/)
 
@@ -91,41 +91,12 @@ docker-compose -f <file_name> down
 2. [Tasking Frontend](https://github.com/WowLabz/tasking_frontend.git)
 3. [Authentication Service](https://github.com/WowLabz/authentication_service.git)
 
-To setup the Backend Node
-
-Clone the WowLabz [Dot_Marketplace_Docker](https://github.com/WowLabz/dot_marketplace_docker.git)
-And to view the entire backend code just [click here](https://github.com/WowLabz/dot_marketplace_backend.git)
-
-Run `docker-compose -f tasking_backend.docker-compose.yml up --build -d`
-
+# Container Instructions
 In order to check for the status of the running node
 Run `docker-compose logs <CONTAINER ID>`
 
-# Build the Authentication Service
-
-To setup the Auth Service
-
-To view the entire Auth Service code just [click here](https://github.com/WowLabz/authentication_service.git)
-
-Run `docker-compose -f tasking_authentication_service.docker-compose.yml up --build -d`
-
-to initiate the service run the following commands
-
-Run `docker-compose -f tasking_backend.docker-compose.yml up --build -d
-
-To check the running container run `docker ps`
-
 # Run UI
-
-To setup the UI
-
-Clone the WowLabz [Dot_Marketplace_Frontend](https://github.com/WowLabz/tasking_frontend.git)
-
-to intitate the docker build for UI
-
-Run `docker-compose up --build -d`
-
-Once the build is complete, access the port `9001` from your localhost
+You can access the frontend application on `http://127.0.0.1:9001`
 
 ![Screenshot_15](https://user-images.githubusercontent.com/11945179/131972401-6a700ce1-d938-45e2-931d-a50986daac12.png)
 
@@ -133,7 +104,9 @@ Once the build is complete, access the port `9001` from your localhost
     
 `docker exec -it <CONTAINER ID> bash` |OR| `docker exec -it <CONTAINER ID> /bin/sh`
     
-# Run Tests
+# Run Tests for the blockchain node
+
+Enter into the interactive bash with the container id pertaining to dot_marketplace_node and run the following commands
     
 `cargo test` (This will run all the test cases)
  

@@ -65,9 +65,9 @@ docker ps
 ```
 Each of these services will be running on the local system ports as below
 1. dot_marketplace_frontend: Directly run the frontend to test out the application. [http://127.0.0.1:9001]
-2. authentication_service: This is the api server [http://127.0.0.1:7001]
+2. authentication_service: This is the api server to check the authentication service [http://127.0.0.1:7001]
 3. marketplace_mongo: Mongodb for the application
-4. dot_marketplace_node: Blockchain node, this can also be tested on the [polkadot explorer](https://polkadot.js.org/apps/#/) Select local node to connect to the local running chain.[ws://127.0.0.1:9944]
+4. dot_marketplace_node: Substrate based blockchain node, this can also be tested on the [polkadot js explorer](https://polkadot.js.org/apps/#/) Select local node to connect to the local running chain.[ws://127.0.0.1:9944]
 
 To stop all the services
 ```bash
@@ -92,7 +92,7 @@ To stop an individual service
 ```bash
 docker-compose -f <file_name> down
 ```
-# Individual Service Repos
+# Individual Service Repos (To do a code walkthrough)
 1. [Tasking Backend Node](https://github.com/WowLabz/tasking_backend.git)
 2. [Tasking Frontend](https://github.com/WowLabz/tasking_frontend.git)
 3. [Authentication Service](https://github.com/WowLabz/authentication_service.git)

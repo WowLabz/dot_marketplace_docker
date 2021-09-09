@@ -98,8 +98,10 @@ docker-compose -f <file_name> down
 3. [Authentication Service](https://github.com/WowLabz/authentication_service.git)
 
 # Container Instructions
-In order to check for the status of the running node
-Run `docker-compose logs <CONTAINER ID>`
+In order to check for the status of the running node run 
+```bash
+docker-compose logs <CONTAINER ID>
+```
 
 # Run UI
 You can access the frontend application on `http://127.0.0.1:9001`
@@ -108,7 +110,13 @@ You can access the frontend application on `http://127.0.0.1:9001`
 
 # Launch Interactive Bash Session with the Node
     
-`docker exec -it <CONTAINER ID> bash` |OR| `docker exec -it <CONTAINER ID> /bin/sh`
+```bash
+docker exec -it <CONTAINER ID> bash
+``` 
+|OR| 
+```bash
+docker exec -it <CONTAINER ID> /bin/sh
+```
     
 # Run Tests for the blockchain node
 

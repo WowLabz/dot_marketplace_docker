@@ -1,3 +1,4 @@
+## Dot Martetplace Docker ##
 ## Setup ##
 First, complete the basic Rust setup instructions. If you want to play at the code level.
 
@@ -45,7 +46,46 @@ To delete the images
 ```
 To get more idea about the project and the build please refer the link <To be added>
 
-# Run backend node
+# Guide To Run All The Services At Once
+
+Once this repo is cloned, follow the commands below to start all the services at once from the main project directory
+
+```bash
+docker-compose up --build -d
+```
+You will be able to see all the running services using 
+```bash
+docker ps
+```
+Each of these services will be running on the local system ports as below
+1. dot_marketplace_frontend: Directly run the frontend to test out the application. [http://127.0.0.1:9001]
+2. authentication_service: This is the api server [http://127.0.0.1:7001]
+3. marketplace_mongo: Mongodb for the application
+4. dot_marketplace_node: Blockchain node, this can also be tested on the [polkadot explorer](https://polkadot.js.org/apps/#/) Select local node to connect to the local running chain.[ws://127.0.0.1:9944]
+
+To stop all the services
+```bash
+docker-compose down
+```
+
+# Guide To Run Each Of The Services Individually
+
+Names of the individual service files
+1. Blockchain Node: `tasking_backend.docker-compose.yml`
+2. UI: `tasking_frontend.docker-compose.yml`
+3. Auth Server: `authentication_service.docker-compose.yml`
+4. Mongodb: `marketplace_mongo.docker-compose.yml`
+
+To run the services individually 
+
+```bash
+docker-compose -f <file_name> up --build -d
+```
+To stop an individual service
+
+```bash
+docker-compose -f <file_name> down
+```
 
 To setup the Backend Node
 

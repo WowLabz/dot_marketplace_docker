@@ -22,28 +22,34 @@ Installation from the terminal on a Ubuntu/Linux Machine
 
 # Docker quick guide
 
-```bash
 To check the compose version
-
+```bash
 docker-compose --version
-
+```
 To run the build
 
-`docker-compose up --build -d` 
+```bash
+docker-compose up --build -d
+``` 
 
 To stop the service
 
-`docker-compose down`
+```bash
+docker-compose down
+```
 
 To view the installed images locally
 
-`docker images`
+```bash
+docker images
+```
 
 To delete the images
 
-`docker rmi <IMAGE ID>`
-
+```bash
+docker rmi <IMAGE ID>
 ```
+
 To get more idea about the project and the build please refer the link <To be added>
 
 # Guide To Run All The Services At Once

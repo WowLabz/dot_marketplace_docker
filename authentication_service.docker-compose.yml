@@ -17,7 +17,6 @@ services:
             MONGO_INITDB_ROOT_PASSWORD: marketplace_pwd
     authentication_service:
         image: authentication_service
-        name: authentication_service
         build:
             context: ./authentication_service
             dockerfile: Dockerfile

@@ -24,7 +24,6 @@ services:
             - "7001:3001"
         depends_on:
             - mongo
-        command: cargo run
         environment:
             - MONGO_URI=mongodb://marketplace_admin:marketplace_pwd@mongo/authentication-service
             - SECRET_KEY=my-secretkey-to-change-in-prod

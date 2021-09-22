@@ -93,8 +93,8 @@ To stop an individual service
 docker-compose -f <file_name> down
 ```
 # Individual Service Repos (To do a code walkthrough)
-1. [Tasking Backend Node](https://github.com/WowLabz/tasking_backend.git)
-2. [Tasking Frontend](https://github.com/WowLabz/tasking_frontend.git)
+1. [Tasking Backend Node](https://github.com/WowLabz/tasking_backend/tree/Phase1_Milestone2)
+2. [Tasking Frontend](https://github.com/WowLabz/tasking_frontend/tree/Phase1_Milestone2)
 3. [Authentication Service](https://github.com/WowLabz/authentication_service.git)
 
 # Container Instructions

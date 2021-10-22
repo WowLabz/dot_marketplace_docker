@@ -3,7 +3,7 @@ FROM paritytech/ci-linux:production AS builder
 RUN apt-get update \
     && apt-get install -y git
 
-RUN git clone --single-branch -b Phase1_Milestone2 https://github.com/WowLabz/tasking_backend.git
+RUN git clone --single-branch -b Phase1_Milestone3 https://github.com/WowLabz/tasking_backend.git
 
 WORKDIR /builds/tasking_backend/
 RUN cargo build --release

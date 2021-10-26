@@ -6,6 +6,7 @@ RUN apt-get update \
 RUN git clone --single-branch -b Phase1_Milestone3 https://github.com/WowLabz/tasking_backend.git
 
 WORKDIR /builds/tasking_backend/
+RUN cargo update -p parity-db
 RUN cargo build --release
 
 FROM debian:buster-slim AS runtime

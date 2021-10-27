@@ -139,157 +139,142 @@ To read about the working of the pallet please refer the guide [Description](htt
 
 # Note:
 1. User will have to install the polkadot-js extension and create an account through the extension. [Link to the extension](https://polkadot.js.org/extension/)
-2. Its preferred to use the chrome browser.
+2. It's preferred to use the Google Chrome browser.
 3. If the application is started using this docker repo, you will be able to access it at
 ```
 http://localhost:9001/
 ```
 
-# Functional Guide for Dot MarketPlace
+# Functional Guide for Dot Marketplace
 
-* `Customer` Work Flow
+* `Customer` Work Flow:
     1. Create Task
     2. Approve Task
+    3. Provide Worker Ratings
 
-* `Worker` Work Flow
+* `Worker` Work Flow:
     1. Bid For Task
     2. Complete Task
     3. Provide Customer Ratings
 
-* The tasks in the dash board are sorted by the task tags preference set by the logged in user
-
-1. User Sign Up
-* User can choose to sign up either as a `Customer` or `Worker`
-* `Customer` is one who wants to posts jobs/tasks that are needed to be completed
-* `Worker` is one who bids for a job/tasks and see to its completion
-
-* User is required to choose from the User Tags that are provided, multiple option can be choosen
+### 1. User Sign Up
+* User can choose to sign up either as a `Customer` or a `Worker`.
+* User is required to choose from the *user tags* that are provided, multiple options can be chosen.
+* `Customer` is the one who wants to post tasks that are to be completed. `Worker` is the one who bids for tasks and works for its completion.
 
 ![Screenshot_20211027_122755](https://user-images.githubusercontent.com/66478092/139015707-0e4d0f45-0c09-4102-be93-b80b0d49b730.png)
 
-2. User Sign In
-* User can sign in with the username (email) and password
+### 2. User Sign In
+* User can sign in with the username (email) and password.
 
-3. DashBoard
-* Once the user is logged in you will see an empty dashboad, user can create a new task & connect to the wallet
+### 3. DashBoard
+* Once the user is logged-in, they will see an empty dashboad and they can connect to the wallet and create a new task here.
 
 ![Screenshot_20211027_100846](https://user-images.githubusercontent.com/66478092/139017058-75fee4ce-c1fa-4a89-a5d6-50d18eb6a479.png)
 
-* Wallet Connection and creating an account
-    - Click on add account and follow the steps below
+* Connecting the wallet by creating an account (as in the screenshot).
 
 ![image (1)](https://user-images.githubusercontent.com/66478092/139018097-4b33be46-143d-40fc-9297-d42126da9237.png)
 
-* Once the account is created you can connect the wallet with the application by clicking on `Connect Wallet` > `Polkaotdot-js`. Once clicked you will be able to see the account name and the balance
+* Once the account is created you can connect the wallet with the application by clicking on `Connect Wallet` > `Polkadot-js`. Once clicked you will be able to see the account name and the balance.
 
-* Account Name is a dropdown from which you can choose any of the accounts
+* Account Name is a dropdown from which you can choose any of the accounts.
 
 ![Screenshot_20211027_125821](https://user-images.githubusercontent.com/66478092/139019829-fa26889e-b336-4121-9502-c9f661c5c486.png)
 
-* You can now start with either work flow for `Customer` or `Worker` by choosing the defualt accounts `Alice` or `Bob`. You can use the connected account for all the transcations by requesting test tokens using `Air Drop`
+* You can now start with workflow for either `Customer` or `Worker` by choosing the default accounts `Alice` or `Bob`.
+* Otherwise you can connect your own account and request test tokens through `Air Drop` to perform transactions.
 
-4. Request `Air Drop` for test tokens
+### 4. Request `Air Drop` for test tokens
 
 ![Screenshot_20211027_130413](https://user-images.githubusercontent.com/66478092/139020631-293fef73-c088-41ba-831f-df42aa824b1f.png)
 
-5. Create Task
+### 5. Create Task
 
-* As a `Customer`, 
+* As a `Customer`:
     - Choose account
     - Task Name & Task Cost
-    - deadline for the task completion (days)
-    - choose the nature of the task from the task tags
-    - you can choose to upload any task related files
+    - Deadline for the task completion (days)
+    - Choose the nature of the task from the task tags
+    - You can choose to upload any task related files
 
 ![Screenshot_20211027_130604](https://user-images.githubusercontent.com/66478092/139020871-0c48cd2f-7cd6-423c-b0ab-4301a0870754.png)
 
 ![Screenshot_20211027_130715](https://user-images.githubusercontent.com/66478092/139021065-a5c5ffcc-b1dd-49f7-ad1f-1fc95cd323ec.png)
 
-* If you choose your own account you will get a pop up as below to authorize the transaction
+* If you choose your own account you will get a pop up as in the screenshot below to authorize the transaction.
 
 ![Screenshot_20211027_131031](https://user-images.githubusercontent.com/66478092/139021709-f6ae6ecb-3f03-41fd-bb8a-399f88a6f3fc.png)
 
-* Notificatons are shown on the right for each transaction & the task is created
+* Notificatons are shown on the right for each transaction & the task is created.
 
 ![Screenshot_20211027_131201](https://user-images.githubusercontent.com/66478092/139021812-6b327be5-acb9-4915-bbe1-23bc3e620e6d.png)
 
-* You can click on the task card to see more details
+* You can click on the task card to see more details.
 
 ![Screenshot_20211027_131348](https://user-images.githubusercontent.com/66478092/139022143-b4a92fce-b295-4b87-b098-08f70f8624fb.png)
 
-* You can see the `task completion percentage` and the completed stages in the workflow
-* When a task is created, amount equivalent to the `task cost` is locked into `escrow` from the `Customer's Account`
-* Attachments can be downloaded by clicking on the respective attachment number
+* You can see the `task completion percentage` and the completed stages in the workflow.
+* When a task is created; amount equivalent to the `task cost` is locked into `escrow` from the `Customer's Account`.
+* The tasks in the dashboard are smart aligned by the *user tags* preference set by the logged-in user.
+* Attachments can be downloaded by clicking on the respective attachment number.
 
-6. Bid Task
+### 6. Bid Task
 
-* As a `Worker`, 
+* As a `Worker`:
     - Choose account
 
 ![Screenshot_20211027_132251](https://user-images.githubusercontent.com/66478092/139023517-55dca4c6-fec0-4664-a43a-889830b8f19a.png)
 
-* Once the task is bidded you can see the status on the card change from `Open` to `InProgress`
-* Along with the worker's name updated on the card
+* Once the task bidding is done, you can see the status on the card change from `Open` to `InProgress`, as well as the worker's name updated on the card.
 
 ![Screenshot_20211027_132337](https://user-images.githubusercontent.com/66478092/139023624-fb543849-4556-4f97-a0d6-9e86a77266d1.png)
 
-* On clicking the card you can now see that the same ammount as the `task cost` is a locked into `escrow` from the `Worker's Account`
-* Total Escorw amount as shown below are from both `Customer` and `Worker`
+* On clicking the card, you can now see that the same amount as the `task cost` is a locked into `escrow` from the `Worker's Account`.
+* Total escrow amount as shown below in the screenshot are from both `Customer` and `Worker`.
 
 ![Screenshot_20211027_132714](https://user-images.githubusercontent.com/66478092/139024284-fb9320e8-75c0-43b5-8aa6-0e0996338af2.png)
 
-7. Complete Task
+### 7. Complete Task
 
-* As a `Worker`, 
-    - Choose account
-    - upload any task related files
+* As a `Worker`:
+    - Choose an account
+    - Upload any task related files
 
-* On completion the staus will now be changed from `InProgress` to `PendingApproval`
+* On completion, the staus will change from `InProgress` to `PendingApproval`.
 
 ![Screenshot_20211027_133413](https://user-images.githubusercontent.com/66478092/139025426-f40b05ce-832e-4e7e-9c60-2e596813edf3.png)
 
 ![Screenshot_20211027_133453](https://user-images.githubusercontent.com/66478092/139025526-828c8bbf-662c-4bfa-b1d1-52fa813b603a.png)
 
-8. Approve Task
+### 8. Approve Task
 
-* As a `Customer`, 
+* As a `Customer`:
     - Choose account
-    - provide ratings for the worker
+    - Provide ratings for the worker
 
 ![Screenshot_20211027_133614](https://user-images.githubusercontent.com/66478092/139025747-ad59110a-11ab-4b7c-9106-0c8b158ed4ab.png)
 
-9. Provide Customer Ratings:
+### 9. Provide Customer Ratings:
 
-* As a `Worker`,
+* As a `Worker`:
     - Choose account
-    - provide ratings for the customer
+    - Provide ratings for the customer
 
 ![Screenshot_20211027_151156](https://user-images.githubusercontent.com/66478092/139041339-ddb7235d-9693-415d-8b33-a02314358cb3.png)
 
-* Task status is no completed and is 100%
+* Task status is now completed and is 100%.
 
 ![Screenshot_20211027_151428](https://user-images.githubusercontent.com/66478092/139041779-0ad73cec-8990-4714-8006-00ed8910bff9.png)
 
-* Once done amound will be unlocked from the escrow, and will now have no money
-* `Customer` will be debited with the amount for the `task cost`
-* `Worker` will be credited with the amount for the `task cost + amount he had locked into escrow` 
+* Once ratings have been provided, amount will be released from the escrow.
+* `Customer` will be debited with the amount for the `task cost`.
+* `Worker` will be credited with the amount for the `task cost + amount he had locked into escrow`.
 
 ![Screenshot_20211027_151448](https://user-images.githubusercontent.com/66478092/139041842-34810b1a-b393-4667-bd7a-e942f915a583.png)
 
-10. User Logout
+### 10. User Logout
 
-* User can logut from the option in the header
+* User can logout from the option in the header.
 
 ![Screenshot_20211027_152041](https://user-images.githubusercontent.com/66478092/139042794-82a9448d-7e07-4de4-a315-29cd395adabf.png)
-
-
-
-
-
-
-
-
-
-
-
-

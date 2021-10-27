@@ -156,6 +156,8 @@ http://localhost:9001/
     2. Complete Task
     3. Provide Customer Ratings
 
+* The tasks in the dash board are sorted by the task tags preference set by the logged in user
+
 1. User Sign Up
 * User can choose to sign up either as a `Customer` or `Worker`
 * `Customer` is one who wants to posts jobs/tasks that are needed to be completed
@@ -255,6 +257,25 @@ http://localhost:9001/
     - provide ratings for the worker
 
 ![Screenshot_20211027_133614](https://user-images.githubusercontent.com/66478092/139025747-ad59110a-11ab-4b7c-9106-0c8b158ed4ab.png)
+
+9. Provide Customer Ratings:
+
+* As a `Worker`,
+    - Choose account
+    - provide ratings for the customer
+
+![Screenshot_20211027_151156](https://user-images.githubusercontent.com/66478092/139041339-ddb7235d-9693-415d-8b33-a02314358cb3.png)
+
+* Task status is no completed and is 100%
+
+![Screenshot_20211027_151428](https://user-images.githubusercontent.com/66478092/139041779-0ad73cec-8990-4714-8006-00ed8910bff9.png)
+
+* Once done amound will be unlocked from the escrow, and will now have no money
+* `Customer` will be debited with the amount for the `task cost`
+* `Worker` will be credited with the amount for the `task cost + amount he had locked into escrow` 
+
+![Screenshot_20211027_151448](https://user-images.githubusercontent.com/66478092/139041842-34810b1a-b393-4667-bd7a-e942f915a583.png)
+
 
 
 

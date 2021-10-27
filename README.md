@@ -138,7 +138,7 @@ To check the working of palletTasking go to Developers -> Extrinsics -> Submit t
 To read about the working of the pallet please refer the guide [Description](https://github.com/WowLabz/tasking_backend/tree/dev#readme)
 
 # Note:
-1. User will have to install the polkadot-js extension and create an account through the extension. [Link to the extension](https://polkadot.js.org/extension/)
+1. Users will have to install the polkadot-js extension and create an account through the extension. [Link to the extension](https://polkadot.js.org/extension/)
 2. It's preferred to use the Google Chrome browser.
 3. If the application is started using this docker repo, you will be able to access it at
 ```
@@ -147,7 +147,7 @@ http://localhost:9001/
 
 # Functional Guide for Dot Marketplace
 
-* `Customer` Work Flow:
+* `Customer` Workflow:
     1. Create Task
     2. Approve Task
     3. Provide Worker Ratings
@@ -158,17 +158,17 @@ http://localhost:9001/
     3. Provide Customer Ratings
 
 ### 1. User Sign Up
-* User can choose to sign up either as a `Customer` or a `Worker`.
+* Users can choose to sign up either as a `Customer` or a `Worker`.
 * User is required to choose from the *user tags* that are provided, multiple options can be chosen.
 * `Customer` is the one who wants to post tasks that are to be completed. `Worker` is the one who bids for tasks and works for its completion.
 
 ![Screenshot_20211027_122755](https://user-images.githubusercontent.com/66478092/139015707-0e4d0f45-0c09-4102-be93-b80b0d49b730.png)
 
 ### 2. User Sign In
-* User can sign in with the username (email) and password.
+* Users can sign in with the username (email) and password.
 
 ### 3. DashBoard
-* Once the user is logged-in, they will see an empty dashboad and they can connect to the wallet and create a new task here.
+* Once the user is logged-in, they will see an empty dashboard and they can connect to the wallet and create a new task here.
 
 ![Screenshot_20211027_100846](https://user-images.githubusercontent.com/66478092/139017058-75fee4ce-c1fa-4a89-a5d6-50d18eb6a479.png)
 
@@ -178,7 +178,7 @@ http://localhost:9001/
 
 * Once the account is created you can connect the wallet with the application by clicking on `Connect Wallet` > `Polkadot-js`. Once clicked you will be able to see the account name and the balance.
 
-* Account Name is a dropdown from which you can choose any of the accounts.
+* Account Name is a drop down from which you can choose any of the accounts.
 
 ![Screenshot_20211027_125821](https://user-images.githubusercontent.com/66478092/139019829-fa26889e-b336-4121-9502-c9f661c5c486.png)
 
@@ -206,7 +206,7 @@ http://localhost:9001/
 
 ![Screenshot_20211027_131031](https://user-images.githubusercontent.com/66478092/139021709-f6ae6ecb-3f03-41fd-bb8a-399f88a6f3fc.png)
 
-* Notificatons are shown on the right for each transaction & the task is created.
+* Notifications are shown on the right for each transaction & the task is created.
 
 ![Screenshot_20211027_131201](https://user-images.githubusercontent.com/66478092/139021812-6b327be5-acb9-4915-bbe1-23bc3e620e6d.png)
 
@@ -215,7 +215,7 @@ http://localhost:9001/
 ![Screenshot_20211027_131348](https://user-images.githubusercontent.com/66478092/139022143-b4a92fce-b295-4b87-b098-08f70f8624fb.png)
 
 * You can see the `task completion percentage` and the completed stages in the workflow.
-* When a task is created; amount equivalent to the `task cost` is locked into `escrow` from the `Customer's Account`.
+* When a task is created; amount equivalent to the `task cost` is locked into the `escrow` from the `Customer's Account`.
 * The tasks in the dashboard are smart aligned by the *user tags* preference set by the logged-in user.
 * Attachments can be downloaded by clicking on the respective attachment number.
 
@@ -230,7 +230,7 @@ http://localhost:9001/
 
 ![Screenshot_20211027_132337](https://user-images.githubusercontent.com/66478092/139023624-fb543849-4556-4f97-a0d6-9e86a77266d1.png)
 
-* On clicking the card, you can now see that the same amount as the `task cost` is a locked into `escrow` from the `Worker's Account`.
+* On clicking the card, you can now see that the same amount as the `task cost` is locked into the `escrow` from the `Worker's Account`.
 * Total escrow amount as shown below in the screenshot are from both `Customer` and `Worker`.
 
 ![Screenshot_20211027_132714](https://user-images.githubusercontent.com/66478092/139024284-fb9320e8-75c0-43b5-8aa6-0e0996338af2.png)
@@ -241,7 +241,7 @@ http://localhost:9001/
     - Choose an account
     - Upload any task related files
 
-* On completion, the staus will change from `InProgress` to `PendingApproval`.
+* On completion, the status will change from `InProgress` to `PendingApproval`.
 
 ![Screenshot_20211027_133413](https://user-images.githubusercontent.com/66478092/139025426-f40b05ce-832e-4e7e-9c60-2e596813edf3.png)
 
@@ -267,7 +267,7 @@ http://localhost:9001/
 
 ![Screenshot_20211027_151428](https://user-images.githubusercontent.com/66478092/139041779-0ad73cec-8990-4714-8006-00ed8910bff9.png)
 
-* Once ratings have been provided, amount will be released from the escrow.
+* Once ratings have been provided, the amount will be released from the escrow.
 * `Customer` will be debited with the amount for the `task cost`.
 * `Worker` will be credited with the amount for the `task cost + amount he had locked into escrow`.
 
@@ -275,6 +275,6 @@ http://localhost:9001/
 
 ### 10. User Logout
 
-* User can logout from the option in the header.
+* Users can logout from the option in the header.
 
 ![Screenshot_20211027_152041](https://user-images.githubusercontent.com/66478092/139042794-82a9448d-7e07-4de4-a315-29cd395adabf.png)

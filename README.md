@@ -276,6 +276,12 @@ http://localhost:9001/
 
 ![Screenshot_20211027_151448](https://user-images.githubusercontent.com/66478092/139041842-34810b1a-b393-4667-bd7a-e942f915a583.png)
 
+10. User Logout
+
+* User can logut from the option in the header
+
+![Screenshot_20211027_152041](https://user-images.githubusercontent.com/66478092/139042794-82a9448d-7e07-4de4-a315-29cd395adabf.png)
+
 
 
 

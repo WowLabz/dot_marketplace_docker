@@ -4,11 +4,11 @@ services:
     dot_marketplace_node:
         image: dot_marketplace_node
         build:
-            context: ./tasking_backend
+            context: ./dot_marketplace_node
             dockerfile: Dockerfile
         ports:
             - "9944:9944"
         environment:
-            - CARGO_HOME=/builds/tasking_backend/.cargo
+            - CARGO_HOME=/builds/dot_marketplace_node/.cargo
         volumes:
-            - .:/builds/tasking_backend
+            - .:/builds/dot_marketplace_node

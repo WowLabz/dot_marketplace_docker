@@ -5,12 +5,14 @@ RUN apt-get update \
 
 RUN git clone --single-branch -b Phase2_Milestone1 https://github.com/WowLabz/dot-marketplace-v2.git
 
-WORKDIR /builds/dot_marketplace_node/
+WORKDIR /builds/dot-marketplace-v2
+RUN rustup update
+RUN rustup default nightly
 RUN cargo update -p parity-db
 RUN cargo build --release
 
 FROM debian:buster-slim AS runtime
-WORKDIR /builds/dot_marketplace_node
-COPY --from=builder /builds/dot_marketplace_node/target/release/node-template /usr/local/bin
+WORKDIR /builds/dot-marketplace-v2
+COPY --from=builder /builds/dot-marketplace-v2/target/release/node-template /usr/local/bin
 EXPOSE 9944
 CMD ["/usr/local/bin/node-template", "--dev", "--ws-external"]

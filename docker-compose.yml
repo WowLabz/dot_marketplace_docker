@@ -9,9 +9,9 @@ services:
         ports:
             - "9944:9944"
         environment:
-            - CARGO_HOME=/builds/dot_marketplace_node/.cargo
+            - CARGO_HOME=/builds/dot-marketplace-v2/.cargo
         volumes:
-            - .:/builds/dot_marketplace_node
+            - .:/builds/dot-marketplace-v2
         networks: 
             - dot_marketplace
 

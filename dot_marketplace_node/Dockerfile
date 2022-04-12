@@ -7,7 +7,8 @@ RUN git clone --single-branch -b Phase2_Milestone1 https://github.com/WowLabz/do
 
 WORKDIR /builds/dot-marketplace-v2
 RUN rustup update
-RUN rustup install 1.58.0
+RUN rustup install 1.59.0
+RUN rustup default nightly
 RUN cargo update -p parity-db
 RUN cargo build --release
 

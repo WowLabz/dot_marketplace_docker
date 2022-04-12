@@ -15,4 +15,4 @@ FROM debian:buster-slim AS runtime
 WORKDIR /builds/dot-marketplace-v2
 COPY --from=builder /builds/dot-marketplace-v2/target/release/node-template /usr/local/bin
 EXPOSE 9944
-CMD ["/usr/local/bin/node-template", "--dev", "--ws-external"]c
+CMD ["/usr/local/bin/node-template", "--dev", "--ws-external"]

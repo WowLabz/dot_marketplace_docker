@@ -11,6 +11,7 @@ RUN rustup update
 RUN rustup install nightly-2021-11-01
 # setting rust default version as 1.58.0-nightly
 RUN rustup default nightly-2021-11-01
+RUN rustup target add wasm32-unknown-unknown
 RUN cargo update -p parity-db
 RUN cargo build --release
 

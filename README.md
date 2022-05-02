@@ -29,7 +29,7 @@ $ docker-compose --version
 
 ```shell
 # To run the build
-$ docker-compose up --build -d
+$ sudo docker-compose up --build -d
 ```
 
 ```shell

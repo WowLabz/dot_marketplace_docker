@@ -1,0 +1,19 @@
+version: '3.4'
+
+services:
+    dot_marketplace_node:
+        image: dot_marketplace_node
+        build:
+            context: ./dot_marketplace_node
+            dockerfile: Dockerfile
+        ports:
+            - "9944:9944"
+        environment:
+            - CARGO_HOME=/builds/dot-marketplace-v2/.cargo
+        volumes:
+            - .:/builds/dot-marketplace-v2
+        networks: 
+            - dot_marketplace
+
+networks: 
+    dot_marketplace:

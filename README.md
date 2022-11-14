@@ -342,16 +342,22 @@ http://localhost:8001/
 
 * As a `Worker`, you can disapprove with the rating provided by the `Customer`.
 
-![Screenshot_DisapproveRatingCustomer]()
-![Screenshot_DisapproveRatingWorker]()
+![Screenshot_DisapproveRatingCustomer](https://user-images.githubusercontent.com/43837760/201709064-e8289b50-71f8-4aea-ba53-099c92697b45.png)
+
+![Screenshot_DisapproveRatingWorker](https://user-images.githubusercontent.com/43837760/201709210-dc9044de-7335-4cb9-9e02-7bddbdbc0624.png)
+
 
 * After disapproving, you can the status of the milestone change to `Dispute Raised`.
 
-![Screenshot_DisputeRaised]()
+![Screenshot_DisputeRaisedCustomer](https://user-images.githubusercontent.com/43837760/201709592-75bad141-1d87-4e08-a26e-bbb63eef0f7d.png)
+
+![Screenshot_DisputeRaisedWorker](https://user-images.githubusercontent.com/43837760/201709775-48116969-cc06-4a05-85a4-048b4b37b42a.png)
+
 
 * You can see the details about the dipute by clicking the `Show Court` button.
 
-![Screenshot_CourtDetails]()
+![Screenshot_CourtDetails](https://user-images.githubusercontent.com/43837760/201709322-65491452-515a-4dd4-8eac-e8aa368cc6e8.png)
+
 
 ### 17. Cast Vote
 * As a `Juror` you cast your vote by providing:
@@ -359,13 +365,22 @@ http://localhost:8001/
     - Rating for `Worker`
     - Rating for `Customer`
 
-![Screenshot_JurorCastVote]()
-![Screenshot_AfterJurorCastVote]()
+![Screenshot_JurorCastVote](https://user-images.githubusercontent.com/43837760/201707966-64adbb30-ccf3-480f-b226-966c9a302359.png)
+
+![Screenshot_Voting](https://user-images.githubusercontent.com/43837760/201708369-7b431a93-ece9-4509-86f1-0d88901a3569.png)
+
+![Screenshot_AfterJurorCastVote](https://user-images.githubusercontent.com/43837760/201708674-dc57c811-98de-4050-852d-3ee581eb0211.png)
+
 
 * As a `Sudo Juror` you cast your vote if the `Juror(s)` fail to cast their vote in a particular period of time, or in case of a tie between the votes.
 
-![Screenshot_SudoJurorCastVote]()
-![Screenshot_AfterSudoJurorCastVote]()
+![Screenshot_SudoJurorCastVote](https://user-images.githubusercontent.com/43837760/201708131-c2e39af0-dde1-420c-9736-ac9443fa5b08.png)
+
+![Screenshot_Voting](https://user-images.githubusercontent.com/43837760/201708369-7b431a93-ece9-4509-86f1-0d88901a3569.png)
+
+![Screenshot_AfterSudoJurorCastVote](https://user-images.githubusercontent.com/43837760/201708868-b5b11d52-4269-4742-8d10-011a738be1c9.png)
+
+
 
 ### 16. User Logout
 

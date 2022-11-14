@@ -152,10 +152,13 @@ http://localhost:8001/
     5. Approve Milestone
     6. Provide Worker Ratings
 
-* `Worker` Work Flow:
+* `Worker` Workflow:
     1. Bid For Milestone
     2. Complete Milestone
     3. Provide Customer Ratings
+
+* `Juror` Workflow:
+    1. Cast Vote
 
 ### 1. User Sign Up
 * Users can choose to sign up either as a `Customer` or a `Worker`.
@@ -334,6 +337,35 @@ http://localhost:8001/
 
 ![Screenshot_CloseProject](https://user-images.githubusercontent.com/43837760/201651516-862799dd-6416-48a6-b932-4b55ded4fcfa.png)
 
+### 16. Disapprove Rating
+* As a `Customer`, you can disapprove with the kind of work done by the `Worker` or by rating provided by the `Worker`.
+
+* As a `Worker`, you can disapprove with the rating provided by the `Customer`.
+
+![Screenshot_DisapproveRatingCustomer]()
+![Screenshot_DisapproveRatingWorker]()
+
+* After disapproving, you can the status of the milestone change to `Dispute Raised`.
+
+![Screenshot_DisputeRaised]()
+
+* You can see the details about the dipute by clicking the `Show Court` button.
+
+![Screenshot_CourtDetails]()
+
+### 17. Cast Vote
+* As a `Juror` you cast your vote by providing:
+    - Support to either `Worker` or `Customer`
+    - Rating for `Worker`
+    - Rating for `Customer`
+
+![Screenshot_JurorCastVote]()
+![Screenshot_AfterJurorCastVote]()
+
+* As a `Sudo Juror` you cast your vote if the `Juror(s)` fail to cast their vote in a particular period of time, or in case of a tie between the votes.
+
+![Screenshot_SudoJurorCastVote]()
+![Screenshot_AfterSudoJurorCastVote]()
 
 ### 16. User Logout
 

@@ -98,7 +98,6 @@ docker-compose -f <file_name> down
 3. [Authentication Service](https://github.com/WowLabz/authentication_service.git)
 4. [File Server](https://github.com/WowLabz/dot_marketplace_file_server.git)
 
-# Container Instructions
 In order to check for the status of the running node run 
 ```bash
 docker-compose logs <CONTAINER ID>
@@ -171,9 +170,10 @@ http://localhost:8001/
 ### 3. DashBoard
 * Once the user is logged-in, they will see a dashboard and they can connect to the wallet and view all the milestones that have been created by multiple users.
 
-![Screenshot_20211027_100846](https://user-images.githubusercontent.com/66478092/139017058-75fee4ce-c1fa-4a89-a5d6-50d18eb6a479.png)
+![Screenshot_20211027_100846](https://user-images.githubusercontent.com/43837760/201646096-53935c49-8940-4e33-b692-775f05d42da5.png)
 
 * Connecting the wallet by creating an account (as in the screenshot).
+
 
 ![image (1)](https://user-images.githubusercontent.com/66478092/139018097-4b33be46-143d-40fc-9297-d42126da9237.png)
 
@@ -181,25 +181,45 @@ http://localhost:8001/
 
 * Account Name is a drop down from which you can choose any of the accounts.
 
-![Screenshot_20211027_125821](https://user-images.githubusercontent.com/66478092/139019829-fa26889e-b336-4121-9502-c9f661c5c486.png)
+![Screenshot_20211027_125821](https://user-images.githubusercontent.com/43837760/201646808-ea8c06b3-ded9-4e93-b7c2-d62478b2c52e.png)
 
 * You can now start with workflow for either `Customer` or `Worker` by choosing the default accounts `Alice` or `Bob`.
 * Otherwise you can connect your own account and request test tokens through `Air Drop` to perform transactions.
 
 ### 4. Request `Air Drop` for test tokens
 
-![Screenshot_20211027_130413](https://user-images.githubusercontent.com/66478092/139020631-293fef73-c088-41ba-831f-df42aa824b1f.png)
+![Screenshot_20211027_130413](https://user-images.githubusercontent.com/43837760/201646955-b8ae9e58-0c5d-4f5e-b3f2-660082f69581.png)
+
+### 5. Search Milestones
+* As a `Worker`: 
+    - Provide a specific criteria for search
+
+![Screenshot_AdvanceSearch1](https://user-images.githubusercontent.com/43837760/201657120-cd62e376-79b2-44b7-8aa2-460cfc762cfb.png)
+
+![Screenshot_AdvanceSearch1](https://user-images.githubusercontent.com/43837760/201657135-5f45e4d3-b4a3-4b02-8665-955d3a0b6f28.png)
+
+![Screenshot_AdvanceSearch1](https://user-images.githubusercontent.com/43837760/201657148-b595bb61-8e70-4ef1-9167-9f4e78f7d3fd.png)
+
 
 ### 5. User Dashboard
 
 * Users can click on the 'User Dashboard' button on the main dashboard to redirect to the `User Dashboard` that provides the functionality to manage all the projects. 
 * Inilitally user will see an empty dashboard and choose to create a new project.
 
+![Screenshot_UserDashboard](https://user-images.githubusercontent.com/43837760/201647203-bcde7b74-7cdf-4eed-8c29-bea6c1c78dcc.png)
+
 ### 6. Create Project
 
 * As a `Customer`:
     - Project Name & Project Tags
     - Add Milestone
+ 
+![Screenshot_CreateProject1](https://user-images.githubusercontent.com/43837760/201647462-1696c2f8-ec77-4168-8cfe-b8bfb9db83b6.png)
+
+![Screenshot_CreateProject2](https://user-images.githubusercontent.com/43837760/201647615-42a44ab4-4303-4b1b-bfa2-acd5575d1943.png)
+
+![Screenshot_CreateProject3](https://user-images.githubusercontent.com/43837760/201648346-dc96182a-47cf-4d4c-b1b6-4740f803d5cb.png)
+
 
 ### 7. Add Milestone
 
@@ -211,9 +231,29 @@ http://localhost:8001/
     - You can choose to upload milestone related files
 * While adding milestone(s) to the project, an amount equivalent to the `Milestone Cost` is locked into the `escrow` from the `Customer's Account`.
 
+![Screenshot_AddMilestone1](https://user-images.githubusercontent.com/43837760/201647825-077357e2-142e-4a35-93bc-f1fbdb1c97d1.png)
+
+![Screenshot_AddMilestone3](https://user-images.githubusercontent.com/43837760/201648008-f012655c-2916-4063-8815-ebb9d109b0ee.png)
+
+![Screenshot_AddMilestone4](https://user-images.githubusercontent.com/43837760/201648034-05b4bbb5-b293-4362-864b-92da060a0485.png)
+
+
+* You can click on the project card to see more details.
+
+![Screenshot_Project1MoreDetails1](https://user-images.githubusercontent.com/43837760/201649567-55c51afc-8816-4303-99cd-7e2fb7722c2d.png)
+
+
+* You can see the details about a project in the accordion provided. You can click on each individual milestone to see full details.
+
+![Screenshot_Project1MoreDetails1](https://user-images.githubusercontent.com/43837760/201649584-496d575d-b42b-4999-8e52-f15d826fa9df.png)
+
+
 ### 8. Add Project To Marketplace
 
 * As a `Customer`, if you think the project is ready to be submitted, add the project to the marketplace. Otherwise, you can make changes to the project if desired.
+
+![Screenshot_AddProjectToMarketplace](https://user-images.githubusercontent.com/43837760/201648525-f4ae1847-1b8c-4b83-ba51-23258ae10c16.png)
+
 
 ### 9. Bid Milestone
 
@@ -223,6 +263,11 @@ http://localhost:8001/
 * While bidding on a milestone, amount equivalent to `Milestone Cost` is locked into the `escrow` from `Worker's Account`.
 * Once the bid is placed successfully, wait for the `Customer` to accept your bid.
 
+![Screesnshot_BidMilestoneDashboard](https://user-images.githubusercontent.com/43837760/201654195-c8e24071-058b-4583-8e04-6d4eab222207.png)
+
+
+![Screenshot_BidMilestone](https://user-images.githubusercontent.com/43837760/201650196-d24341b3-e167-41e0-81eb-6a4723657073.png)
+
 
 ### 10. Accept Bid
 
@@ -231,23 +276,44 @@ http://localhost:8001/
 * Once the bid has been accepted, you can see the status on the card change from `Open` to `InProgress`, as well as the worker's name updated on the card.
 * All the other bids are rejected and the amount locked into the escrow is returned back to their account.
 
+
+![Screenshot_ShowBidders](https://user-images.githubusercontent.com/43837760/201650518-d95a299c-8415-4601-9dfd-d500c1186673.png)
+
+![Screenshot_AcceptBid](https://user-images.githubusercontent.com/43837760/201650527-052b24a6-acdc-4e1b-b7b6-dcbd960424b4.png)
+
+
 ### 11. Complete Milestone
 
 * As a `Worker`: 
     - Upload any milestone related files and complete milestone
 * On completion, the status will change from `InProgress` to `PendingApproval`.
 
+![Screenshot_CompleteMilestone1](https://user-images.githubusercontent.com/43837760/201652247-df2b5147-6f4e-4e35-a2b1-45a499f41b21.png)
+
+![Screenshot_CompleteMilestone2](https://user-images.githubusercontent.com/43837760/201652269-24e79c6d-9ae6-4c81-a38f-3234177cac86.png)
+
+![Screenshot_CompleteMilestone3](https://user-images.githubusercontent.com/43837760/201652165-2f50e21f-df13-45e5-9c93-4ea86562885d.png)
+
+![Screenshot_PendingApproval](https://user-images.githubusercontent.com/43837760/201652086-00869b5e-89ab-4adb-8247-0a59ebd056c7.png)
 
 ### 12. Approve Milestone
 
 * As a `Customer`:
     - Provide rating for the worker
+    
+![Screenshot_ApproveOrDisapprove](https://user-images.githubusercontent.com/43837760/201651955-40edbeb8-7485-4d40-90b1-99cc1dbc86c4.png)
+
+![Screenshot_ApproveMilestone](https://user-images.githubusercontent.com/43837760/201651972-3719e813-569a-4882-b6c3-b82fccfb2ec2.png)
 
 
 ### 13. Provide Customer Ratings:
 
 * As a `Worker`:
     - Provide ratings for the customer
+![Screenshot_ProvideRatingOrDisapproveRAting](https://user-images.githubusercontent.com/43837760/201651775-3692eabc-db06-404d-86b7-dad6575302bb.png)
+
+![Screenshot_ProvideCustomerRating](https://user-images.githubusercontent.com/43837760/201651788-28e1b33d-5f61-4d4d-9448-a632b54a3dcb.png)
+
 
 ### 14. Close Milestone
 
@@ -258,97 +324,22 @@ http://localhost:8001/
 * `Worker` will be credited with the amount for the `milestone cost + amount he had locked into escrow`.
 * The milestone is now `Completed`.
 
+![Screenshot_CloseMilestoneOrDisapproveRating](https://user-images.githubusercontent.com/43837760/201651617-e526e13c-24c7-4342-b3b2-e8ddbc9a24fa.png)
+
+![Screenshot_MilestoneCompleted](https://user-images.githubusercontent.com/43837760/201651626-3d8ffc09-9b6d-438e-b94f-4ed8ce83c25a.png)
+
+
 ### 15. Close Project
 * A project can be closed if all the milestones for the project are `Completed` or all the milestones for the project are in state `Open`.
 
-### 5. Create Task
+![Screenshot_CloseProject](https://user-images.githubusercontent.com/43837760/201651516-862799dd-6416-48a6-b932-4b55ded4fcfa.png)
 
-* As a `Customer`:
-    - Choose account
-    - Task Name & Task Cost
-    - Deadline for the task completion (days)
-    - Choose the nature of the task from the task tags
-    - You can choose to upload any task related files
 
-![Screenshot_20211027_130604](https://user-images.githubusercontent.com/66478092/139020871-0c48cd2f-7cd6-423c-b0ab-4301a0870754.png)
-
-![Screenshot_20211027_130715](https://user-images.githubusercontent.com/66478092/139021065-a5c5ffcc-b1dd-49f7-ad1f-1fc95cd323ec.png)
-
-* If you choose your own account you will get a pop up as in the screenshot below to authorize the transaction.
-
-![Screenshot_20211027_131031](https://user-images.githubusercontent.com/66478092/139021709-f6ae6ecb-3f03-41fd-bb8a-399f88a6f3fc.png)
-
-* Notifications are shown on the right for each transaction & the task is created.
-
-![Screenshot_20211027_131201](https://user-images.githubusercontent.com/66478092/139021812-6b327be5-acb9-4915-bbe1-23bc3e620e6d.png)
-
-* You can click on the task card to see more details.
-
-![Screenshot_20211027_131348](https://user-images.githubusercontent.com/66478092/139022143-b4a92fce-b295-4b87-b098-08f70f8624fb.png)
-
-* You can see the `task completion percentage` and the completed stages in the workflow.
-* When a task is created; amount equivalent to the `task cost` is locked into the `escrow` from the `Customer's Account`.
-* The tasks in the dashboard are smart aligned by the *user tags* preference set by the logged-in user.
-* Attachments can be downloaded by clicking on the respective attachment number.
-
-### 6. Bid Task
-
-* As a `Worker`:
-    - Choose account
-
-![Screenshot_20211027_132251](https://user-images.githubusercontent.com/66478092/139023517-55dca4c6-fec0-4664-a43a-889830b8f19a.png)
-
-* Once the task bidding is done, you can see the status on the card change from `Open` to `InProgress`, as well as the worker's name updated on the card.
-
-![Screenshot_20211027_132337](https://user-images.githubusercontent.com/66478092/139023624-fb543849-4556-4f97-a0d6-9e86a77266d1.png)
-
-* On clicking the card, you can now see that the same amount as the `task cost` is locked into the `escrow` from the `Worker's Account`.
-* Total escrow amount as shown below in the screenshot are from both `Customer` and `Worker`.
-
-![Screenshot_20211027_132714](https://user-images.githubusercontent.com/66478092/139024284-fb9320e8-75c0-43b5-8aa6-0e0996338af2.png)
-
-### 7. Complete Task
-
-* As a `Worker`:
-    - Choose an account
-    - Upload any task related files
-
-* On completion, the status will change from `InProgress` to `PendingApproval`.
-
-![Screenshot_20211027_133413](https://user-images.githubusercontent.com/66478092/139025426-f40b05ce-832e-4e7e-9c60-2e596813edf3.png)
-
-![Screenshot_20211027_133453](https://user-images.githubusercontent.com/66478092/139025526-828c8bbf-662c-4bfa-b1d1-52fa813b603a.png)
-
-### 8. Approve Task
-
-* As a `Customer`:
-    - Choose account
-    - Provide ratings for the worker
-
-![Screenshot_20211027_133614](https://user-images.githubusercontent.com/66478092/139025747-ad59110a-11ab-4b7c-9106-0c8b158ed4ab.png)
-
-### 9. Provide Customer Ratings:
-
-* As a `Worker`:
-    - Choose account
-    - Provide ratings for the customer
-
-![Screenshot_20211027_151156](https://user-images.githubusercontent.com/66478092/139041339-ddb7235d-9693-415d-8b33-a02314358cb3.png)
-
-* Task status is now completed and is 100%.
-
-![Screenshot_20211027_151428](https://user-images.githubusercontent.com/66478092/139041779-0ad73cec-8990-4714-8006-00ed8910bff9.png)
-
-* Once ratings have been provided, the amount will be released from the escrow.
-* `Customer` will be debited with the amount for the `task cost`.
-* `Worker` will be credited with the amount for the `task cost + amount he had locked into escrow`.
-
-![Screenshot_20211027_151448](https://user-images.githubusercontent.com/66478092/139041842-34810b1a-b393-4667-bd7a-e942f915a583.png)
-
-### 10. User Logout
+### 16. User Logout
 
 * Users can logout from the option in the header.
 
-![Screenshot_20211027_152041](https://user-images.githubusercontent.com/66478092/139042794-82a9448d-7e07-4de4-a315-29cd395adabf.png)
+![Screenthost_LogOut](https://user-images.githubusercontent.com/43837760/201651440-978973c5-a71d-4a38-83e1-c7813a6fcc21.png)
+
 
 To read about the working of the pallet please refer the guide [Description](https://github.com/WowLabz/tasking_backend/tree/dev#readme)

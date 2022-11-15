@@ -173,10 +173,9 @@ http://localhost:8001/
 ### 3. DashBoard
 * Once the user is logged-in, they will see a dashboard and they can connect to the wallet and view all the milestones that have been created by multiple users.
 
-![Screenshot_20211027_100846](https://user-images.githubusercontent.com/43837760/201646096-53935c49-8940-4e33-b692-775f05d42da5.png)
+![image](https://user-images.githubusercontent.com/57192661/201854016-32689c0b-d1f2-4032-9b04-3a313be796b5.png)
 
 * Connecting the wallet by creating an account (as in the screenshot).
-
 
 ![image (1)](https://user-images.githubusercontent.com/66478092/139018097-4b33be46-143d-40fc-9297-d42126da9237.png)
 
@@ -194,15 +193,15 @@ http://localhost:8001/
 ![Screenshot_20211027_130413](https://user-images.githubusercontent.com/43837760/201646955-b8ae9e58-0c5d-4f5e-b3f2-660082f69581.png)
 
 ### 5. Search Milestones
-* As a `Worker`: 
-    - Provide a specific criteria for search
+* The search functionality is to find projects with one or more milestones, and the worker can use this search bar for accessing all of them based on a specific criteria provided by the worker himself / herself.
 
-![Screenshot_AdvanceSearch1](https://user-images.githubusercontent.com/43837760/201657120-cd62e376-79b2-44b7-8aa2-460cfc762cfb.png)
+|Screenshot 1|Screenshot 2|
+|:-:|:-:|
+|![Screenshot](https://user-images.githubusercontent.com/43837760/201657120-cd62e376-79b2-44b7-8aa2-460cfc762cfb.png)|![Screenshot](https://user-images.githubusercontent.com/43837760/201657135-5f45e4d3-b4a3-4b02-8665-955d3a0b6f28.png)|
 
-![Screenshot_AdvanceSearch1](https://user-images.githubusercontent.com/43837760/201657135-5f45e4d3-b4a3-4b02-8665-955d3a0b6f28.png)
-
-![Screenshot_AdvanceSearch1](https://user-images.githubusercontent.com/43837760/201657148-b595bb61-8e70-4ef1-9167-9f4e78f7d3fd.png)
-
+|Screenshot 3|
+|:-:|
+|![Screenshot](https://user-images.githubusercontent.com/43837760/201657148-b595bb61-8e70-4ef1-9167-9f4e78f7d3fd.png)|
 
 ### 5. User Dashboard
 
@@ -211,182 +210,169 @@ http://localhost:8001/
 
 ![Screenshot_UserDashboard](https://user-images.githubusercontent.com/43837760/201647203-bcde7b74-7cdf-4eed-8c29-bea6c1c78dcc.png)
 
-### 6. Create Project
+### 6. Create Project (by the customer)
 
-* As a `Customer`:
+* Mandatory fields:
     - Project Name & Project Tags
     - Add Milestone
  
 ![Screenshot_CreateProject1](https://user-images.githubusercontent.com/43837760/201647462-1696c2f8-ec77-4168-8cfe-b8bfb9db83b6.png)
 
-![Screenshot_CreateProject2](https://user-images.githubusercontent.com/43837760/201647615-42a44ab4-4303-4b1b-bfa2-acd5575d1943.png)
+### 6a. Add Milestone to a project (by the customer)
 
-![Screenshot_CreateProject3](https://user-images.githubusercontent.com/43837760/201648346-dc96182a-47cf-4d4c-b1b6-4740f803d5cb.png)
-
-
-### 7. Add Milestone
-
-* Milestones can be added while creating the project(a minimum of one has to be added while creating the project) and/or before adding the project to the marketplace
-* As a `Customer`:
+* Milestones can be added while creating the project (a minimum of one has to be added while creating the project) and/or before adding the project to the marketplace
+* Mandatory fields:
     - Milestone Name & Milestone Cost
     - Choose the nature of the milestone from the tags
     - Deadline for completion (days)
     - You can choose to upload milestone related files
 * While adding milestone(s) to the project, an amount equivalent to the `Milestone Cost` is locked into the `escrow` from the `Customer's Account`.
 
-![Screenshot_AddMilestone1](https://user-images.githubusercontent.com/43837760/201647825-077357e2-142e-4a35-93bc-f1fbdb1c97d1.png)
+|Screenshot 1|Screenshot 2|
+|:-:|:-:|
+|![Screenshot](https://user-images.githubusercontent.com/43837760/201647825-077357e2-142e-4a35-93bc-f1fbdb1c97d1.png)|![Screenshot](https://user-images.githubusercontent.com/43837760/201648008-f012655c-2916-4063-8815-ebb9d109b0ee.png)|
 
-![Screenshot_AddMilestone3](https://user-images.githubusercontent.com/43837760/201648008-f012655c-2916-4063-8815-ebb9d109b0ee.png)
+|Screenshot 3|Screenshot 4|
+|:-:|:-:|
+|![Screenshot](https://user-images.githubusercontent.com/43837760/201648034-05b4bbb5-b293-4362-864b-92da060a0485.png)|![Screenshot](https://user-images.githubusercontent.com/43837760/201647615-42a44ab4-4303-4b1b-bfa2-acd5575d1943.png)|
 
-![Screenshot_AddMilestone4](https://user-images.githubusercontent.com/43837760/201648034-05b4bbb5-b293-4362-864b-92da060a0485.png)
+* Final project with one / more milestones
 
+![Screenshot_CreateProject3](https://user-images.githubusercontent.com/43837760/201648346-dc96182a-47cf-4d4c-b1b6-4740f803d5cb.png)
 
 * You can click on the project card to see more details.
 
 ![Screenshot_Project1MoreDetails1](https://user-images.githubusercontent.com/43837760/201649567-55c51afc-8816-4303-99cd-7e2fb7722c2d.png)
 
-
-* You can see the details about a project in the accordion provided. You can click on each individual milestone to see full details.
+* You can click on each individual milestone to see full details.
 
 ![Screenshot_Project1MoreDetails1](https://user-images.githubusercontent.com/43837760/201649584-496d575d-b42b-4999-8e52-f15d826fa9df.png)
 
 
-### 8. Add Project To Marketplace
+### 8. Add Project To Marketplace (by the customer)
 
-* As a `Customer`, if you think the project is ready to be submitted, add the project to the marketplace. Otherwise, you can make changes to the project if desired.
+* If you think the project is ready to be submitted, add the project to the marketplace.
 
 ![Screenshot_AddProjectToMarketplace](https://user-images.githubusercontent.com/43837760/201648525-f4ae1847-1b8c-4b83-ba51-23258ae10c16.png)
 
 
-### 9. Bid Milestone
+### 9. Bid for Milestone (by the worker)
 
-* As a `Worker` (inside main dashboard):
-    - Click on the milestone card
-    - Select the milestone and click on `Bid`
+* Inside main dashboard, click on the milestone card and select the milestone for which the worker wants to `Bid`.
 * While bidding on a milestone, amount equivalent to `Milestone Cost` is locked into the `escrow` from `Worker's Account`.
 * Once the bid is placed successfully, wait for the `Customer` to accept your bid.
 
-![Screesnshot_BidMilestoneDashboard](https://user-images.githubusercontent.com/43837760/201654195-c8e24071-058b-4583-8e04-6d4eab222207.png)
+|Screenshot 1|Screenshot 2|
+|:-:|:-:|
+|![Screenshot](https://user-images.githubusercontent.com/43837760/201654195-c8e24071-058b-4583-8e04-6d4eab222207.png)|![Screenshot](https://user-images.githubusercontent.com/43837760/201650196-d24341b3-e167-41e0-81eb-6a4723657073.png)|
 
 
-![Screenshot_BidMilestone](https://user-images.githubusercontent.com/43837760/201650196-d24341b3-e167-41e0-81eb-6a4723657073.png)
+### 10. Accept Bid (by the customer)
 
-
-### 10. Accept Bid
-
-* As a `Customer`:
-    - Accept a bid most suitable for the milstone
+* Accept a bid most suitable for the milstone.
 * Once the bid has been accepted, you can see the status on the card change from `Open` to `InProgress`, as well as the worker's name updated on the card.
 * All the other bids are rejected and the amount locked into the escrow is returned back to their account.
 
+|Screenshot 1|Screenshot 2|
+|:-:|:-:|
+|![Screenshot](https://user-images.githubusercontent.com/43837760/201650518-d95a299c-8415-4601-9dfd-d500c1186673.png)|![Screenshot](https://user-images.githubusercontent.com/43837760/201650527-052b24a6-acdc-4e1b-b7b6-dcbd960424b4.png)|
 
-![Screenshot_ShowBidders](https://user-images.githubusercontent.com/43837760/201650518-d95a299c-8415-4601-9dfd-d500c1186673.png)
 
-![Screenshot_AcceptBid](https://user-images.githubusercontent.com/43837760/201650527-052b24a6-acdc-4e1b-b7b6-dcbd960424b4.png)
+### 11. Complete Milestone (by the worker)
 
-
-### 11. Complete Milestone
-
-* As a `Worker`: 
-    - Upload any milestone related files and complete milestone
+* Upload the milestone related file(s) and click on complete milestone.
 * On completion, the status will change from `InProgress` to `PendingApproval`.
 
-![Screenshot_CompleteMilestone1](https://user-images.githubusercontent.com/43837760/201652247-df2b5147-6f4e-4e35-a2b1-45a499f41b21.png)
+|Screenshot 1|Screenshot 2|
+|:-:|:-:|
+|![Screenshot](https://user-images.githubusercontent.com/43837760/201652247-df2b5147-6f4e-4e35-a2b1-45a499f41b21.png)|![Screenshot](https://user-images.githubusercontent.com/43837760/201652269-24e79c6d-9ae6-4c81-a38f-3234177cac86.png)|
 
-![Screenshot_CompleteMilestone2](https://user-images.githubusercontent.com/43837760/201652269-24e79c6d-9ae6-4c81-a38f-3234177cac86.png)
+|Screenshot 3|Screenshot 4|
+|:-:|:-:|
+|![Screenshot](https://user-images.githubusercontent.com/43837760/201652165-2f50e21f-df13-45e5-9c93-4ea86562885d.png)|![Screenshot](https://user-images.githubusercontent.com/43837760/201652086-00869b5e-89ab-4adb-8247-0a59ebd056c7.png)|
 
-![Screenshot_CompleteMilestone3](https://user-images.githubusercontent.com/43837760/201652165-2f50e21f-df13-45e5-9c93-4ea86562885d.png)
+### 12. Approve Milestone (by the customer)
 
-![Screenshot_PendingApproval](https://user-images.githubusercontent.com/43837760/201652086-00869b5e-89ab-4adb-8247-0a59ebd056c7.png)
+* Provide a suitable rating for the worker according to the work done by the worker.
 
-### 12. Approve Milestone
+|Screenshot 1|Screenshot 2|
+|:-:|:-:|
+|![Screenshot](https://user-images.githubusercontent.com/43837760/201651955-40edbeb8-7485-4d40-90b1-99cc1dbc86c4.png)|![Screenshot](https://user-images.githubusercontent.com/43837760/201651972-3719e813-569a-4882-b6c3-b82fccfb2ec2.png)|
 
-* As a `Customer`:
-    - Provide rating for the worker
-    
-![Screenshot_ApproveOrDisapprove](https://user-images.githubusercontent.com/43837760/201651955-40edbeb8-7485-4d40-90b1-99cc1dbc86c4.png)
+### 13. Provide Customer Rating (by the worker)
 
-![Screenshot_ApproveMilestone](https://user-images.githubusercontent.com/43837760/201651972-3719e813-569a-4882-b6c3-b82fccfb2ec2.png)
+* Provide rating for the customer.
 
+|Screenshot 1|Screenshot 2|
+|:-:|:-:|
+|![Screenshot](https://user-images.githubusercontent.com/43837760/201651775-3692eabc-db06-404d-86b7-dad6575302bb.png)|![Screenshot](https://user-images.githubusercontent.com/43837760/201651788-28e1b33d-5f61-4d4d-9448-a632b54a3dcb.png)|
 
-### 13. Provide Customer Ratings:
+### 14. Close Milestone (by the customer)
 
-* As a `Worker`:
-    - Provide ratings for the customer
-![Screenshot_ProvideRatingOrDisapproveRAting](https://user-images.githubusercontent.com/43837760/201651775-3692eabc-db06-404d-86b7-dad6575302bb.png)
+* Once milestone has been closed, the amount is released from the escrow.
+* `Customer` is debited with the amount for the `milestone cost`.
+* `Worker` is credited with the cumulative cost for completion of the milestone + the worker's initial bid amount locked in escrow.
+* The status of milestone after completion is `Completed`.
 
-![Screenshot_ProvideCustomerRating](https://user-images.githubusercontent.com/43837760/201651788-28e1b33d-5f61-4d4d-9448-a632b54a3dcb.png)
-
-
-### 14. Close Milestone
-
-* As a `Customer`:
-    - Close Milestone
-* Once milestone has been closed, the amount will be released from the escrow.
-* `Customer` will be debited with the amount for the `milestone cost`.
-* `Worker` will be credited with the amount for the `milestone cost + amount he had locked into escrow`.
-* The milestone is now `Completed`.
-
-![Screenshot_CloseMilestoneOrDisapproveRating](https://user-images.githubusercontent.com/43837760/201651617-e526e13c-24c7-4342-b3b2-e8ddbc9a24fa.png)
-
-![Screenshot_MilestoneCompleted](https://user-images.githubusercontent.com/43837760/201651626-3d8ffc09-9b6d-438e-b94f-4ed8ce83c25a.png)
-
+|Screenshot 1|Screenshot 2|
+|:-:|:-:|
+|![Screenshot](https://user-images.githubusercontent.com/43837760/201651617-e526e13c-24c7-4342-b3b2-e8ddbc9a24fa.png)|![Screenshot](https://user-images.githubusercontent.com/43837760/201651626-3d8ffc09-9b6d-438e-b94f-4ed8ce83c25a.png)|
 
 ### 15. Close Project
 * A project can be closed if all the milestones for the project are `Completed` or all the milestones for the project are in state `Open`.
 
 ![Screenshot_CloseProject](https://user-images.githubusercontent.com/43837760/201651516-862799dd-6416-48a6-b932-4b55ded4fcfa.png)
 
+
+## The decentralized court can be now triggered on every milestone.
+
 ### 16. Disapprove Rating
 * As a `Customer`, you can disapprove with the kind of work done by the `Worker` or by rating provided by the `Worker`.
 
 * As a `Worker`, you can disapprove with the rating provided by the `Customer`.
 
-![Screenshot_DisapproveRatingCustomer](https://user-images.githubusercontent.com/43837760/201709064-e8289b50-71f8-4aea-ba53-099c92697b45.png)
+|Screenshot 1|Screenshot 2|
+|:-:|:-:|
+|![Screenshot](https://user-images.githubusercontent.com/43837760/201709064-e8289b50-71f8-4aea-ba53-099c92697b45.png)|![Screenshot](https://user-images.githubusercontent.com/43837760/201709210-dc9044de-7335-4cb9-9e02-7bddbdbc0624.png)|
 
-![Screenshot_DisapproveRatingWorker](https://user-images.githubusercontent.com/43837760/201709210-dc9044de-7335-4cb9-9e02-7bddbdbc0624.png)
+* After disapproving, the status of the milestone is changed to `Dispute Raised`.
 
-
-* After disapproving, you can the status of the milestone change to `Dispute Raised`.
-
-![Screenshot_DisputeRaisedCustomer](https://user-images.githubusercontent.com/43837760/201709592-75bad141-1d87-4e08-a26e-bbb63eef0f7d.png)
-
-![Screenshot_DisputeRaisedWorker](https://user-images.githubusercontent.com/43837760/201709775-48116969-cc06-4a05-85a4-048b4b37b42a.png)
-
+|Screenshot 1|Screenshot 2|
+|:-:|:-:|
+|![Screenshot](https://user-images.githubusercontent.com/43837760/201709592-75bad141-1d87-4e08-a26e-bbb63eef0f7d.png)|![Screenshot](https://user-images.githubusercontent.com/43837760/201709775-48116969-cc06-4a05-85a4-048b4b37b42a.png)|
 
 * You can see the details about the dipute by clicking the `Show Court` button.
 
 ![Screenshot_CourtDetails](https://user-images.githubusercontent.com/43837760/201709322-65491452-515a-4dd4-8eac-e8aa368cc6e8.png)
-
 
 ### 17. Cast Vote
 * As a `Juror` you cast your vote by providing:
     - Support to either `Worker` or `Customer`
     - Rating for `Worker`
     - Rating for `Customer`
+    
+|Screenshot 1|Screenshot 2|
+|:-:|:-:|
+|![Screenshot](https://user-images.githubusercontent.com/43837760/201707966-64adbb30-ccf3-480f-b226-966c9a302359.png)|![Screenshot](https://user-images.githubusercontent.com/43837760/201708369-7b431a93-ece9-4509-86f1-0d88901a3569.png)|
 
-![Screenshot_JurorCastVote](https://user-images.githubusercontent.com/43837760/201707966-64adbb30-ccf3-480f-b226-966c9a302359.png)
-
-![Screenshot_Voting](https://user-images.githubusercontent.com/43837760/201708369-7b431a93-ece9-4509-86f1-0d88901a3569.png)
-
-![Screenshot_AfterJurorCastVote](https://user-images.githubusercontent.com/43837760/201708674-dc57c811-98de-4050-852d-3ee581eb0211.png)
-
+|Screenshot 3|
+|:-:|
+|![Screenshot](https://user-images.githubusercontent.com/43837760/201708674-dc57c811-98de-4050-852d-3ee581eb0211.png)|
 
 * As a `Sudo Juror` you cast your vote if the `Juror(s)` fail to cast their vote in a particular period of time, or in case of a tie between the votes.
 
-![Screenshot_SudoJurorCastVote](https://user-images.githubusercontent.com/43837760/201708131-c2e39af0-dde1-420c-9736-ac9443fa5b08.png)
+|Screenshot 1|Screenshot 2|
+|:-:|:-:|
+|![Screenshot](https://user-images.githubusercontent.com/43837760/201708131-c2e39af0-dde1-420c-9736-ac9443fa5b08.png)|![Screenshot](https://user-images.githubusercontent.com/43837760/201708369-7b431a93-ece9-4509-86f1-0d88901a3569.png)|
 
-![Screenshot_Voting](https://user-images.githubusercontent.com/43837760/201708369-7b431a93-ece9-4509-86f1-0d88901a3569.png)
-
-![Screenshot_AfterSudoJurorCastVote](https://user-images.githubusercontent.com/43837760/201708868-b5b11d52-4269-4742-8d10-011a738be1c9.png)
-
-
+|Screenshot 3|
+|:-:|
+|![Screenshot](https://user-images.githubusercontent.com/43837760/201708868-b5b11d52-4269-4742-8d10-011a738be1c9.png)|
 
 ### 16. User Logout
 
 * Users can logout from the option in the header.
 
 ![Screenthost_LogOut](https://user-images.githubusercontent.com/43837760/201651440-978973c5-a71d-4a38-83e1-c7813a6fcc21.png)
-
 
 To read about the working of the pallet please refer the guide [Description](https://github.com/WowLabz/tasking_backend/tree/dev#readme)

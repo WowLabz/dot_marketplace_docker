@@ -1,5 +1,22 @@
 {
+  "name": "Dot Makerplace Docker",
   "image": "ubuntu:latest",
+  "settings": {
+    "terminal.integrated.defaultProfile.linux": "fish",
+    "lldb.executable": "/usr/bin/lldb",
+    "editor.formatOnSave": true,
+    "files.exclude": {
+     "**/CODE_OF_CONDUCT.md": true,
+     "**/LICENSE": true
+    }
+  },
+  "extensions": [
+    "rust-lang.rust-analyzer",
+    "bungcip.better-toml",
+    "vadimcn.vscode-lldb",
+    "serayuzgur.crates",
+    "vscodevim.vim"
+  ],
   "features": {
     "ghcr.io/devcontainers/features/docker-from-docker:1": {},
      "ghcr.io/devcontainers/features/rust:1": {

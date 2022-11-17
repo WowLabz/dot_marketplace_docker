@@ -1,0 +1,11 @@
+{
+  "image": "ubuntu:latest",
+  "features": {
+    "ghcr.io/devcontainers/features/docker-from-docker:1": {},
+     "ghcr.io/devcontainers/features/rust:1": {
+       "profile": "complete"
+     },
+     "ghcr.io/meaningful-ooo/devcontainer-features/fish:1": {},
+     "ghcr.io/devcontainers/features/git:1": {}
+  }
+}

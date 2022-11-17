@@ -17,6 +17,11 @@
     "serayuzgur.crates",
     "vscodevim.vim"
   ],
+  "forwardPorts": [
+    3000,
+    9944,
+    9933
+  ],
   "features": {
     "ghcr.io/devcontainers/features/docker-from-docker:1": {},
      "ghcr.io/devcontainers/features/rust:1": {

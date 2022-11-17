@@ -3,7 +3,7 @@ FROM paritytech/ci-linux:production AS builder
 RUN apt-get update \
     && apt-get install -y git
 
-RUN git clone --single-branch -b Phase2_Milestone2 https://github.com/WowLabz/dot-marketplace-v2.git
+RUN git clone --single-branch -b Phase3_Milestone1 https://github.com/WowLabz/dot-marketplace-v2.git
 
 WORKDIR /builds/dot-marketplace-v2
 # RUN rustup update

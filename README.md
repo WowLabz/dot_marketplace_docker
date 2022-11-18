@@ -76,12 +76,6 @@ The video demonstrates the flow of tasking backend which was created as a part o
 [Video demo in with polkadot.js explorer connected to the node](https://user-images.githubusercontent.com/43837760/202637994-08705bb3-b99b-4f95-a828-381584d513d9.mp4)
 
 
-## Chat app workflow testing on Polkadot.js explorer 
-
-* >Video  walkthrough \
-A functional demo of the chat system flow \
-[Video demo in with polkadot.js explorer connected to the node](https://user-images.githubusercontent.com/58659064/158811706-868510e4-dfdd-42d0-8d2e-9620a59e141c.mp4)
-
 
 To read about the working of the pallet please refer the guide [Description](https://github.com/WowLabz/dot-marketplace-v2/blob/main/README.md)
 

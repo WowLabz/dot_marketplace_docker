@@ -11,6 +11,6 @@ RUN cargo build --release
 
 FROM debian:buster-slim AS runtime
 WORKDIR /builds/tasking_backend
-COPY --from=builder /builds/tasking_backend/target/release/node-template /usr/local/bin
+COPY --from=builder /builds/tasking_backend/target/release/dot_marketplace_node /usr/local/bin
 EXPOSE 9944
-CMD ["/usr/local/bin/node-template", "--dev", "--ws-external"]
+CMD ["/usr/local/bin/dot_marketplace_node", "--dev", "--ws-external"]

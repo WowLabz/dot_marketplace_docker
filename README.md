@@ -20,7 +20,7 @@ $ chmod +x /usr/local/bin/docker-compose
 
 ## Docker guide
 
-Clone the repo for Phase 2 [ Milestone 1 ] [Dot Marketplace Docker](https://github.com/WowLabz/dot_marketplace_docker/tree/Phase3_Milestone2)
+Clone the repo for Phase 3 [ Milestone 2 ] [Dot Marketplace Docker](https://github.com/WowLabz/dot_marketplace_docker/tree/Phase3_Milestone2)
 
 ```shell
 # To check the compose version

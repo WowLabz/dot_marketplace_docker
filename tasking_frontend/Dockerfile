@@ -4,7 +4,7 @@ FROM node:lts-alpine3.10
 RUN apk update \
     && apk add git
 
-RUN git clone --single-branch -b Phase1_Milestone3 https://github.com/WowLabz/tasking_frontend.git
+RUN git clone --single-branch -b Phase3_Milestone3 https://github.com/WowLabz/tasking_frontend.git
 
 WORKDIR /tasking_frontend
 

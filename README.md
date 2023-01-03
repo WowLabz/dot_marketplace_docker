@@ -68,6 +68,7 @@ Each of these services will be running on the local system ports as below
 2. authentication_service: This is the api server to check the authentication service [http://127.0.0.1:7001]
 3. marketplace_mongo: Mongodb for the application
 4. dot_marketplace_node: Substrate based blockchain node, this can also be tested on the [polkadot js explorer](https://polkadot.js.org/apps/#/) Select local node to connect to the local running chain.[ws://127.0.0.1:9944]
+5. dot_marketplace_file_server: IPFS File server using NFT Storage for dotmarketplace. [http://127.0.0.1:8001] 
 
 To stop all the services
 ```bash
@@ -81,6 +82,7 @@ Names of the individual service files
 2. UI: `tasking_frontend.docker-compose.yml`
 3. Auth Server: `authentication_service.docker-compose.yml`
 4. Mongodb: `marketplace_mongo.docker-compose.yml`
+5. IPFS File Server: `dot_marketplace_file_server.docker-compose.yml`
 
 To run the services individually 
 
@@ -96,7 +98,7 @@ docker-compose -f <file_name> down
 1. [Tasking Backend Node](https://github.com/WowLabz/tasking_backend.git)
 2. [Tasking Frontend](https://github.com/WowLabz/tasking_frontend.git)
 3. [Authentication Service](https://github.com/WowLabz/authentication_service.git)
-4. [File Server](https://github.com/WowLabz/dot_marketplace_file_server.git)
+4. [IPFS File Server](https://github.com/WowLabz/dot_marketplace_file_server.git)
 
 In order to check for the status of the running node run 
 ```bash

@@ -8,6 +8,8 @@ RUN git clone --single-branch -b Phase3_Milestone3 https://github.com/WowLabz/ta
 
 WORKDIR /tasking_frontend
 
+RUN rm -f yarn.lock package-lock.json
+
 RUN yarn install 
 RUN yarn add jquery 
 RUN yarn add popper.js

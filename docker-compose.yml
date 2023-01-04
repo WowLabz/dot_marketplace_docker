@@ -23,7 +23,7 @@ services:
             context: ./authentication_service
             dockerfile: Dockerfile
         ports:
-            - "7001:3001"
+            - "7001:7001"
         depends_on:
             - mongo
         environment:

@@ -47,9 +47,53 @@ $ docker images
 $ docker rmi <IMAGE ID>
 ```
 
+# Guide To Run All The Services At Once
+
+Once this repo is cloned, follow the commands below to start all the services at once from the main project directory
+
+```bash
+docker-compose up --build -d
+```
+You will be able to see all the running services using 
+```bash
+docker ps
+```
+Each of these services will be running on the local system ports as below
+1. dot_marketplace_frontend: Directly run the frontend to test out the application. [http://127.0.0.1:9001]
+2. authentication_service: This is the api server to check the authentication service [http://127.0.0.1:7001]
+3. marketplace_mongo: Mongodb for the application
+4. dot_marketplace_node: Substrate based blockchain node, this can also be tested on the [polkadot js explorer](https://polkadot.js.org/apps/#/) Select local node to connect to the local running chain.[ws://127.0.0.1:9944]
+
+To stop all the services
+```bash
+docker-compose down
+```
 >After building the image, you can also view it on polkadot.js explorer via local node
 
+# Guide To Run Each Of The Services Individually
+
+Names of the individual service files
+1. Blockchain Node: `dot_marketplace_node.docker-compose.yml`
+2. UI: `tasking_frontend.docker-compose.yml`
+3. Auth Server: `authentication_service.docker-compose.yml`
+
+To run the services individually 
+
+```bash
+docker-compose -f <file_name> up --build -d
+```
+To stop an individual service
+
+```bash
+docker-compose -f <file_name> down
+```
+
 <br>
+
+# Individual Service Repos (To do a code walkthrough)
+1. [Dot Marketplace Node](https://github.com/WowLabz/dot-marketplace-v2/tree/Phase3_Milestone2)
+2. [Tasking Frontend](https://github.com/WowLabz/tasking_frontend/tree/Phase3_Milestone2)
+3. [Authentication Service](https://github.com/WowLabz/authentication_service/tree/version/2.0)
 
 ## Functional Guide for Dot Marketplace
 
@@ -82,14 +126,17 @@ $ docker rmi <IMAGE ID>
 
 <br>
 
-## Migration from Tasks to Milestone based Projects
+## Video Demonstrations
 
-* >Video  walkthrough  
-The video demonstrates the flow of tasking backend which was created as a part of Phase 2 but has now been upgraded to milestone based submissions. \
-[Video demo in with polkadot.js explorer connected to the node](https://user-images.githubusercontent.com/43837760/202637994-08705bb3-b99b-4f95-a828-381584d513d9.mp4)
+1. Dot Marketplace - [Regular Task Workflow](https://user-images.githubusercontent.com/66478092/210616793-d55dabcb-0e8e-4860-a70e-3f40c80985f0.mp4)
+2. [Court Dispute Resolution](https://user-images.githubusercontent.com/66478092/210618245-9f703673-cbd0-4627-8094-f1cf87625c3e.mp4)
+3. [Court Sudo Juror](https://user-images.githubusercontent.com/66478092/210618324-13903436-4293-4714-9fc1-8aad3369ab95.mp4)
+4. Backend Extrincis: The video demonstrates the flow of tasking backend which was created as a part of Phase 2 but has now been upgraded to milestone based submissions. [Video demo in with polkadot.js explorer connected to the node](https://user-images.githubusercontent.com/43837760/202637994-08705bb3-b99b-4f95-a828-381584d513d9.mp4)
+5. Backend Decentralized Court workflow testing on Polkadot.js explorer: A functional demo of the court system when a publisher disapproves a milestone [Video demo in with polkadot.js explorer connected to the node](https://user-images.githubusercontent.com/43837760/202639155-419220ca-d0f6-46f4-8d9a-ad1c0678fecd.mp4)
 
+<br>
 
-## Dencetralized Court
+## Dencetralized Court (Milestone Based)
 1. The court caters to the Web3 space and hence by default becomes an autonomous entity run by the people.
 2. It is designed in a way which resembles an actual offline court that helps in settling long term or short term disputes.
 3. The disputes that we have thought of covering with this court is milestone based.
@@ -110,14 +157,6 @@ The video demonstrates the flow of tasking backend which was created as a part o
 18. If no jurors decide on participating, the process for selection is run for 3 more eras.
 19. Even in those 3 eras there is no juror, then a Sudo juror is selected which is part of the ecosystem and his / her decision is not bound by time.
 20. The Sudo juror is selected using the Fischer-Yates modern method & Linear Congruential Generator.
-
-## Decentralized Court workflow testing on Polkadot.js explorer 
-
-* >Video  walkthrough \
-A functional demo of the court system when a publisher disapproves a milestone\
-[Video demo in with polkadot.js explorer connected to the node](https://user-images.githubusercontent.com/43837760/202639155-419220ca-d0f6-46f4-8d9a-ad1c0678fecd.mp4)
-
-<br>
 
 To read about the working of the pallet please refer the guide [Description](https://github.com/WowLabz/dot-marketplace-v2/blob/main/README.md)
 

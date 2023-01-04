@@ -66,12 +66,16 @@ $ docker rmi <IMAGE ID>
     10. Disapprove Rating
     11. Raise Dispute
 
+<br />
+
 * `Worker` Work Flow:
     1. Bid For Milestone
     2. Complete Milestone
     3. Provide Customer Ratings
     4. Disapprove Rating
     5. Raise Dispute
+
+<br>
 
 * `Juror` Work Flow:
     1. Accept Jury Duty
@@ -80,10 +84,32 @@ $ docker rmi <IMAGE ID>
 
 ## Migration from Tasks to Milestone based Projects
 
-* >Video  walkthrough \ 
+* >Video  walkthrough  
 The video demonstrates the flow of tasking backend which was created as a part of Phase 2 but has now been upgraded to milestone based submissions. \
 [Video demo in with polkadot.js explorer connected to the node](https://user-images.githubusercontent.com/43837760/202637994-08705bb3-b99b-4f95-a828-381584d513d9.mp4)
 
+
+## Dencetralized Court
+1. The court caters to the Web3 space and hence by default becomes an autonomous entity run by the people.
+2. It is designed in a way which resembles an actual offline court that helps in settling long term or short term disputes.
+3. The disputes that we have thought of covering with this court is milestone based.
+4. In the beginning there are 2 entities - a. The Customer b. Worker.
+5. The customer is the entity that puts up work on the platform holding a specific amount for the work done as reward.
+6. The worker is the entity that takes up the work for the customer in a hope to complete it in a given time frame.
+7. When a case is registered for a specific dispute over a task / milestone.
+8. Potential Jurors are selected based on their ratings (which it is set to 4 and above) and matching task tags. Each of them receive notification to accept/decline jury duty. For testing we have set a few accounts with predefined data at genesis [here](https://github.com/WowLabz/dot-marketplace-v2/blob/Phase3_Milestone2/node/src/chain_spec.rs#L150-L232).
+9. The decision to be part of the jury is 1 day (1 era) or 14_400 slots i.e. 24 hours. However, for the purpose of testing it has been set to 5 blocks [source code](https://github.com/WowLabz/dot-marketplace-v2/blob/Phase3_Milestone2/pallets/pallet-tasking/src/lib.rs#L2124-L2153).
+10. Once the day to become a juror has passed. Its not possible to be part of the jury for any respective case. Instead a Sudo juror is selected from a registered pool/council who are part of the chain.
+11. Potential Juror can accept the jury duty and become an active juror by casting the vote and providing the ratings for both customer and worker.
+12. There is limit set on how many jurors can take part. 2 jurors per case based on first come first serve basis.
+13. Once the case begins/accepted, the jurors have 2 eras (2 days) to evaluate the work done & cast their votes to either of the parties i.e. the customer or worker. However, for testing purposes the duration is for 10 blocks.
+14. Once all the votes have been cast by the participating jurors, the winner is decided and the amount is transferred to the winner automatically via the escrow.
+15. If the winner is the customer, the customer doesn't have to pay anything to the worker.
+16. If the winner is the worker, the reward amount from the escrow goes to the worker.
+17. The jurors also get a share (this can be configured) for participating. The court fees is 30% of the total cost, which is divided equally among the final jurors.
+18. If no jurors decide on participating, the process for selection is run for 3 more eras.
+19. Even in those 3 eras there is no juror, then a Sudo juror is selected which is part of the ecosystem and his / her decision is not bound by time.
+20. The Sudo juror is selected using the Fischer-Yates modern method & Linear Congruential Generator.
 
 ## Decentralized Court workflow testing on Polkadot.js explorer 
 

@@ -63,12 +63,6 @@ You will be able to see all the running services using
 ```bash
 docker ps
 ```
-Each of these services will be running on the local system ports as below
-1. dot_marketplace_frontend: Directly run the frontend to test out the application. [http://127.0.0.1:8000]
-2. authentication_service: This is the api server to check the authentication service [http://127.0.0.1:7001]
-3. marketplace_mongo: Mongodb for the application
-4. dot_marketplace_node: Substrate based blockchain node, this can also be tested on the [polkadot js explorer](https://polkadot.js.org/apps/#/) Select local node to connect to the local running chain.[ws://127.0.0.1:9944]
-5. dot_marketplace_file_server: IPFS File server using NFT Storage for dotmarketplace. [http://127.0.0.1:8001] 
 
 To stop all the services
 ```bash
@@ -95,10 +89,10 @@ To stop an individual service
 docker-compose -f <file_name> down
 ```
 # Individual Service Repos (To do a code walkthrough)
-1. [Tasking Backend Node](https://github.com/WowLabz/tasking_backend.git)
-2. [Tasking Frontend](https://github.com/WowLabz/tasking_frontend.git)
-3. [Authentication Service](https://github.com/WowLabz/authentication_service.git)
-4. [IPFS File Server](https://github.com/WowLabz/dot_marketplace_file_server.git)
+1. [Tasking Backend Node](https://github.com/WowLabz/dot-marketplace-v2/tree/Phase3_Milestone3)
+2. [Tasking Frontend](https://github.com/WowLabz/tasking_frontend/tree/Phase3_Milestone3)
+3. [Authentication Service](https://github.com/WowLabz/authentication_service/tree/version/2.0)
+4. [IPFS File Server](https://github.com/WowLabz/dot_marketplace_file_server/tree/version/1.00)
 
 In order to check for the status of the running node run 
 ```bash
@@ -106,7 +100,7 @@ docker-compose logs <CONTAINER ID>
 ```
 
 # Run UI
-You can access the frontend application on `http://127.0.0.1:8000`
+You can access the frontend application on `http://127.0.0.1:9001`
 
 ![Screenshot_15](https://user-images.githubusercontent.com/11945179/131972401-6a700ce1-d938-45e2-931d-a50986daac12.png)
 
@@ -141,26 +135,73 @@ To check the working of palletTasking go to Developers -> Extrinsics -> Submit t
 2. It's preferred to use the Google Chrome browser.
 3. If the application is started using this docker repo, you will be able to access it at
 ```
-http://localhost:8001/
+http://localhost:9001/
 ```
+
+## Video Demonstrations
+
+1. Dot Marketplace - [Regular Task Workflow](https://user-images.githubusercontent.com/66478092/210616793-d55dabcb-0e8e-4860-a70e-3f40c80985f0.mp4)
+2. [Court Dispute Resolution](https://user-images.githubusercontent.com/66478092/210618245-9f703673-cbd0-4627-8094-f1cf87625c3e.mp4)
+3. [Court Sudo Juror](https://user-images.githubusercontent.com/66478092/210618324-13903436-4293-4714-9fc1-8aad3369ab95.mp4)
+4. Backend Extrincis: The video demonstrates the flow of tasking backend which was created as a part of Phase 3 but has now been upgraded to milestone based submissions. [Video demo in with polkadot.js explorer connected to the node](https://user-images.githubusercontent.com/43837760/202637994-08705bb3-b99b-4f95-a828-381584d513d9.mp4)
+5. Backend Decentralized Court workflow testing on Polkadot.js explorer: A functional demo of the court system when a publisher disapproves a milestone [Video demo in with polkadot.js explorer connected to the node](https://user-images.githubusercontent.com/43837760/202639155-419220ca-d0f6-46f4-8d9a-ad1c0678fecd.mp4)
+
+<br>
+
+## Dencetralized Court (Milestone Based)
+1. The court caters to the Web3 space and hence by default becomes an autonomous entity run by the people.
+2. It is designed in a way which resembles an actual offline court that helps in settling long term or short term disputes.
+3. The disputes that we have thought of covering with this court is milestone based.
+4. In the beginning there are 2 entities - a. The Customer b. Worker.
+5. The customer is the entity that puts up work on the platform holding a specific amount for the work done as reward.
+6. The worker is the entity that takes up the work for the customer in a hope to complete it in a given time frame.
+7. When a case is registered for a specific dispute over a task / milestone.
+8. Potential Jurors are selected based on their ratings (which it is set to 4 and above) and matching task tags. Each of them receive notification to accept/decline jury duty. For testing we have set a few accounts with predefined data at genesis [here](https://github.com/WowLabz/dot-marketplace-v2/blob/Phase3_Milestone3/node/src/chain_spec.rs#L150-L208).
+9. The decision to be part of the jury is 1 day (1 era) or 14_400 slots i.e. 24 hours. However, for the purpose of testing it has been set to 5 blocks [source code](https://github.com/WowLabz/dot-marketplace-v2/blob/Phase3_Milestone3/pallets/pallet-tasking/src/lib.rs#L1972-L1996).
+10. Once the day to become a juror has passed. Its not possible to be part of the jury for any respective case. Instead a Sudo juror is selected from a registered pool/council who are part of the chain.
+11. Potential Juror can accept the jury duty and become an active juror by casting the vote and providing the ratings for both customer and worker.
+12. There is limit set on how many jurors can take part. 2 jurors per case based on first come first serve basis.
+13. Once the case begins/accepted, the jurors have 2 eras (2 days) to evaluate the work done & cast their votes to either of the parties i.e. the customer or worker. However, for testing purposes the duration is for 10 blocks.
+14. Once all the votes have been cast by the participating jurors, the winner is decided and the amount is transferred to the winner automatically via the escrow.
+15. If the winner is the customer, the customer doesn't have to pay anything to the worker.
+16. If the winner is the worker, the reward amount from the escrow goes to the worker.
+17. The jurors also get a share (this can be configured) for participating. The court fees is 30% of the total cost, which is divided equally among the final jurors.
+18. If no jurors decide on participating, the process for selection is run for 3 more eras.
+19. Even in those 3 eras there is no juror, then a Sudo juror is selected which is part of the ecosystem and his / her decision is not bound by time.
+20. The Sudo juror is selected using the Fischer-Yates modern method & Linear Congruential Generator.
+
 
 # Functional Guide for Dot Marketplace
 
 * `Customer` Workflow:
     1. Create Project
-    2. Add Milestones To Project
-    3. Add Project To Marketplace
+    2. Add Milestones to Project
+    3. Add Project to Marketplace
     4. Accept Bid
     5. Approve Milestone
     6. Provide Worker Ratings
+    7. Close Milestone
+    8. Close Project
+    9. Disapprove Milestone
+    10. Disapprove Rating
+    11. Raise Dispute
 
-* `Worker` Workflow:
+<br />
+
+* `Worker` Work Flow:
     1. Bid For Milestone
     2. Complete Milestone
     3. Provide Customer Ratings
+    4. Disapprove Rating
+    5. Raise Dispute
 
-* `Juror` Workflow:
-    1. Cast Vote
+<br>
+
+* `Juror` Work Flow:
+    1. Accept Jury Duty
+
+<br>
+
 
 ### 1. User Sign Up
 * Users can choose to sign up either as a `Customer` or a `Worker`.
@@ -205,14 +246,14 @@ http://localhost:8001/
 |:-:|
 |![Screenshot](https://user-images.githubusercontent.com/43837760/201657148-b595bb61-8e70-4ef1-9167-9f4e78f7d3fd.png)|
 
-### 5. User Dashboard
+### 6. User Dashboard
 
 * Users can click on the 'User Dashboard' button on the main dashboard to redirect to the `User Dashboard` that provides the functionality to manage all the projects. 
 * Inilitally user will see an empty dashboard and choose to create a new project.
 
 ![Screenshot_UserDashboard](https://user-images.githubusercontent.com/43837760/201647203-bcde7b74-7cdf-4eed-8c29-bea6c1c78dcc.png)
 
-### 6. Create Project (by the customer)
+### 7. Create Project (by the customer)
 
 * Mandatory fields:
     - Project Name & Project Tags
@@ -220,7 +261,7 @@ http://localhost:8001/
  
 ![Screenshot_CreateProject1](https://user-images.githubusercontent.com/43837760/201647462-1696c2f8-ec77-4168-8cfe-b8bfb9db83b6.png)
 
-### 6a. Add Milestone to a project (by the customer)
+### 7a. Add Milestone to a project (by the customer)
 
 * Milestones can be added while creating the project (a minimum of one has to be added while creating the project) and/or before adding the project to the marketplace
 * Mandatory fields:

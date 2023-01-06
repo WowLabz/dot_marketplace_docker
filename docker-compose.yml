@@ -1,19 +1,81 @@
 version: '3.4'
 
 services:
+    mongo:
+        image: marketplace_mongo
+        build:
+            context: ./mongoDb
+            dockerfile: Dockerfile
+        volumes:
+            - "./mongoDb/mongoVolume/db:/data/db"
+        restart: always
+        ports:
+            - "27019:27017"
+        environment: 
+            MONGO_INITDB_ROOT_USERNAME: marketplace_admin
+            MONGO_INITDB_ROOT_PASSWORD: marketplace_pwd
+        networks: 
+            - dot_marketplace
+
+    authentication_service:
+        image: authentication_service
+        build:
+            context: ./authentication_service
+            dockerfile: Dockerfile
+        ports:
+            - "7001:7001"
+        depends_on:
+            - mongo
+        environment:
+            - MONGO_URI=mongodb://marketplace_admin:marketplace_pwd@mongo/authentication-service
+            - SECRET_KEY=my-secretkey-to-change-in-prod
+        networks: 
+            - dot_marketplace
+        restart: always
+
     dot_marketplace_node:
         image: dot_marketplace_node
         build:
-            context: ./dot_marketplace_node
+            context: ./tasking_backend
             dockerfile: Dockerfile
         ports:
             - "9944:9944"
         environment:
-            - CARGO_HOME=/builds/dot-marketplace-v2/.cargo
+            - CARGO_HOME=/builds/tasking_backend/.cargo
         volumes:
-            - .:/builds/dot-marketplace-v2
+            - .:/builds/tasking_backend
         networks: 
             - dot_marketplace
+
+    dot_marketplace_file_server:
+        image: dot_marketplace_file_server
+        build:
+            context: ./dot_marketplace_file_server
+            dockerfile: Dockerfile
+        ports:
+            - "8001:8001"
+        networks: 
+            - dot_marketplace
+        restart: always
+
+    dot_marketplace_frontend:
+        image: dot_marketplace_frontend
+        build:
+            context: ./tasking_frontend
+            dockerfile: Dockerfile
+        ports:
+            - "9001:8000"
+        depends_on: 
+            - mongo
+            - authentication_service
+            - dot_marketplace_node
+        environment: 
+            - REACT_APP_AUTH_SERVER=http://127.0.0.1:7001
+            - REACT_APP_BLOCKCHAIN_NODE=ws://127.0.0.1:9944
+            - REACT_APP_FILE_SERVER=http://127.0.0.1:8001
+        networks: 
+            - dot_marketplace
+        restart: always
 
 networks: 
     dot_marketplace:

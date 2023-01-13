@@ -72,11 +72,11 @@ docker-compose down
 # Guide To Run Each Of The Services Individually
 
 Names of the individual service files
-1. Blockchain Node: `tasking_backend.docker-compose.yml`
-2. UI: `tasking_frontend.docker-compose.yml`
-3. Auth Server: `authentication_service.docker-compose.yml`
-4. Mongodb: `marketplace_mongo.docker-compose.yml`
-5. IPFS File Server: `dot_marketplace_file_server.docker-compose.yml`
+1. Blockchain Node: `tasking_backend.docker-compose.yml` Port: `9944`
+2. UI: `tasking_frontend.docker-compose.yml` Port: `9001`
+3. Auth Server: `authentication_service.docker-compose.yml` Port: `7001`
+4. Mongodb: `marketplace_mongo.docker-compose.yml` Port: `27019`
+5. IPFS File Server: `dot_marketplace_file_server.docker-compose.yml` Port: `8001`
 
 To run the services individually 
 
